@@ -1,0 +1,23 @@
+							  Spoken Tutorials - Linux Assignment 
+						Funded by the National Mission on Education through ICT
+							 Indian Institute of Technology Bombay,
+								http://spoken-tutorial.org
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+General Purpose Utilities in Linux
+
+
+1)Display the calender for the month of March 2012
+
+Ans: To display the calender, we can use "cal" command along with the specfied date.
+     "cal 3 2012" - for march 2012
+
+2)List all the files and directories of the directory /usr/lib on the terminal. Now put the same information in a file named results. 
+  Display the contents of the file results now.
+
+Ans: To list all the files and directories , we can use the "ls" command along with the "-l" arguement. To store the information in a
+     a file, > -filename- can be used.
+
+     "ls -l /usr/lib > results
+     cat results"
