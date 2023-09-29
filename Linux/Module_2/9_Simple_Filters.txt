@@ -1,0 +1,41 @@
+ASSIGNMENT - 9
+SIMPLE FILTERS
+
+
+
+HEAD:
+1. Try to get the first 10 lines from /etc/passwd
+Ans:  $ cat /etc/passwd | head
+
+2. try to get just the first 3 lines from /etc/passwd
+Ans:  $ cat /etc/passwd | head -n3
+
+
+TAIL:
+1. Try to get the Last 10 lines from /etc/passwd
+Ans: $ cat /etc/passwd | tail
+
+2. Try to get just the Last 3 lines from /etc/passwd
+Ans: $ cat /etc/passwd | tail -n3
+
+3. Try to follow the log file /var/log/auth.log
+Ans: $ tail -F /var/log/auth.log
+
+
+SORT:
+1. Try to sort the file /etc/passwd in assending order.
+Ans: $ cat /etc/passwd | sort
+
+2. Try to sort the file /etc/passwd in decending order.
+Ans: $ cat /etc/passwd | sort -r
+
+3. Try to sort the file /etc/passwd in assending order based on the 3rd column.
+Ans: $ cat /etc/passwd | sort -nk 3
+
+4. Try to sort the file /etc/passwd in assending order based on the 3rd column and ask sort to look at the thrid column as a whole number.
+Ans: $ cat /etc/passwd | sort -k 3,3n
+
+
+CUT:
+1. Try to cut just the usernames from the file /etc/passwd
+Ans: $ cut -d: -f1 /etc/passwd

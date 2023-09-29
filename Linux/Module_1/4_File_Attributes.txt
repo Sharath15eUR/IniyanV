@@ -1,0 +1,29 @@
+							  Spoken Tutorials - Linux Assignment 
+						Funded by the National Mission on Education through ICT
+							 Indian Institute of Technology Bombay,
+								http://spoken-tutorial.org
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+File Attributes
+
+1. Create a file abc.txt and change the ownership of this file to some other user on your machine,
+   and also change the group to family.
+
+Ans: To create a file, we can use the "touch" command and to change the owner, "chown" command is used
+     
+     $ touch abc.txt
+     $ chown heisenberg abc.txt
+     $ chgrp family abc.txt
+
+2. Create a file exercise.txt and make it  executable.
+
+Ans: $ touch exercise.txt
+     $ chmod +x exercise.txt
+
+3. Create a file test.txt on your desktop and identify its inode number, also create a softlink
+   for test.txt in your home.
+
+Ans: $ touch text.txt
+     $ ls -i test.txt
+     $ ln -s text.txt link
+

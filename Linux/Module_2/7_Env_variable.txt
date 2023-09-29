@@ -1,0 +1,24 @@
+							  Spoken Tutorials - Linux Assignment 
+						Funded by the National Mission on Education through ICT
+							 Indian Institute of Technology Bombay,
+								http://spoken-tutorial.org
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Environment Variable
+
+
+1. How can you know what is the secondary command prompt set your system ?
+   How can you change the secondary command prompt from the default to your username ?
+
+Ans:  $echo $PS2 - used to display the secondary prompt
+      $PS2="$LOGNAME >" - used to change the command promt to username
+
+2. How can you ensure that the mv command (used for renaming a file) always asks for permission before overwriting an existing destination file ? 
+   [ Hint : use alias command ]
+
+Ans: "mv -i" is used to move file interactively. To make it always interactive, we can alias mv -i to mv
+     $alias mv="mv -i"
+
+
+

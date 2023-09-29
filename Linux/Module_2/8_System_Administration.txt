@@ -1,0 +1,53 @@
+							  Spoken Tutorials - Linux Assignment 
+						Funded by the National Mission on Education through ICT
+							 Indian Institute of Technology Bombay,
+								http://spoken-tutorial.org
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Basics Of System Administration in Linux
+
+
+1) Create a new user account and home directory called "Duck" 
+Ans:  $ sudo adduser duck
+      [sudo] password for sonofalegend:
+      Adding user `duck' ...
+      Adding new group `duck' (1001) ...
+      Adding new user `duck' (1001) with group `duck' ...
+      Creating home directory `/home/duck' ...
+      Copying files from `/etc/skel' ...
+
+2) Set the user account "Duck's" expirey date as 07 - 01 - 2015
+Ans:  $ sudo usermod -e 2015-01-07 duck
+
+3) find the id of the user account "Duck"
+Ans:  $ su – duck
+      Enter the password of duck account
+      $ cd ~
+      $ id
+
+4) Type df and du commands and see the output on your terminal.
+Ans: duck@DESKTOP-N0FC69J:~$ df
+     Filesystem     1K-blocks      Used Available Use% Mounted on
+     rootfs         249937980 129795696 120142284  52% /
+     none           249937980 129795696 120142284  52% /dev
+     none           249937980 129795696 120142284  52% /run
+     none           249937980 129795696 120142284  52% /run/lock
+     none           249937980 129795696 120142284  52% /run/shm
+     none           249937980 129795696 120142284  52% /run/user
+     tmpfs          249937980 129795696 120142284  52% /sys/fs/cgroup
+     C:\            249937980 129795696 120142284  52% /mnt/c
+     D:\            676758524   1645876 675112648   1% /mnt/d
+     E:\            488369148 314347016 174022132  65% /mnt/e
+
+     duck@DESKTOP-N0FC69J:~$ du
+     8       .
+
+5) Type this command on the terminal and see the output :
+   du -ch *.txt
+Ans: duck@DESKTOP-N0FC69J:~$ du -ch *.txt
+     4.0K	file1.txt
+     2.0K	file2.txt
+     6.0K	total
+
+6) Delete the user account "Duck" permanently along with its home folder.
+Ans:  $sudo userdel -r duck
