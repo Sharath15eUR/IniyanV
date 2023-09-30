@@ -1,0 +1,6 @@
+1) Explore some other commands like -E, + and ?
+
+Ans: -E  -  denotes extended regular expressions. It interprets pattern as extended regular expressions.
+      +  -  Repetetion operator. The preceeding item will be matched one or more times.
+      ?  -  Repetetion operator. The preceeding operator is optional and matched at most once.
+
