@@ -1,0 +1,29 @@
+					Spoken Tutorials - Bash Assignment 
+				Funded by the National Mission on Education through ICT
+				       Indian Institute of Technology Bombay,
+					       http://spoken-tutorial.org
+-------------------------------------------------------------------------------------------------------------------
+Conditional Loops
+
+1) Find the sum of first n prime numbers.
+
+#!/bin/bash
+n=$1
+sum=0
+count=0
+number=2
+while [ $count -lt $n ]; do
+    is_prime=true
+    for ((i=2; i*i<=number; i++)); do
+        if [ $((number % i)) -eq 0 ]; then
+            is_prime=false
+            break
+        fi
+    done
+    if $is_prime; then
+        sum=$((sum + number))
+        count=$((count + 1))
+    fi
+    number=$((number + 1))
+done
+echo "$sum"

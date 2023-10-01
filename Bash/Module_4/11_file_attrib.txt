@@ -1,0 +1,16 @@
+					Spoken Tutorials - Bash Assignment 
+				Funded by the National Mission on Education through ICT
+				       Indian Institute of Technology Bombay,
+					       http://spoken-tutorial.org
+-------------------------------------------------------------------------------------------------------------------
+String and File attributes
+
+1) Explore some more attributes
+   -r
+   -x
+   -o
+
+Ans: 
+-r: This attribute checks if a file is readable.
+-x: This attribute checks if a file is executable.
+-o: This attribute checks if the file is owned by the current user.

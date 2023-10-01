@@ -1,0 +1,14 @@
+					Spoken Tutorials - Bash Assignment 
+				Funded by the National Mission on Education through ICT
+				       Indian Institute of Technology Bombay,
+					       http://spoken-tutorial.org
+-------------------------------------------------------------------------------------------------------------------
+Globbing and Export statement
+
+1) Write a Bash script to do all operations discussed under Globbing
+
+Ans: #!/bin/bash
+     ls *.txt
+     ls [aA]*.sh
+     ls [^a-c]*.sh
+     ls file?

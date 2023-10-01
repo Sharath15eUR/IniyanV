@@ -1,0 +1,10 @@
+					Spoken Tutorials - Bash Assignment 
+				Funded by the National Mission on Education through ICT
+				       Indian Institute of Technology Bombay,
+					       http://spoken-tutorial.org
+-------------------------------------------------------------------------------------------------------------------
+Command Line arguments and Quoting
+
+1) Write a bash program for addition using command line arguments.
+
+Ans: echo "The sum of $1 and $2 is: $(($1 + $2))"
