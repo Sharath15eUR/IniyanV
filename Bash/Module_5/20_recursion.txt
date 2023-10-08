@@ -1,0 +1,28 @@
+					Spoken Tutorials - Bash Assignment 
+				Funded by the National Mission on Education through ICT
+				       Indian Institute of Technology Bombay,
+					       http://spoken-tutorial.org
+-------------------------------------------------------------------------------------------------------------------
+Recursive function
+
+1) Write a program where the recursive function calculates the sum of N numbers 
+#!/bin/bash
+
+function rec {
+    n=$1
+    if [ $n -eq 0 ]; then
+        echo 0
+    else
+        p=$((n - 1))
+        q=$(rec "$p")
+        sum=$((n + q))
+        echo $sum
+    fi
+}
+
+read -p "Enter N: " N
+r=$(rec "$N")
+echo "The sum of the first $N numbers is: $r"
+
+Explaination: when the value of N is passed to the function, the previous number is stored in another variable. Then the recursive call is done to add the current number
+and the previous number until the value is 0. Finally the aggregated sum is displayed.

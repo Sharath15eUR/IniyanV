@@ -1,0 +1,62 @@
+					Spoken Tutorials - Bash Assignment 
+				Funded by the National Mission on Education through ICT
+				       Indian Institute of Technology Bombay,
+					       http://spoken-tutorial.org
+-------------------------------------------------------------------------------------------------------------------
+Case statement
+
+1) Write a menu driven program for mathematical calculation
+   a. It should take user inputs a and b
+   b. It should ask for mathematical operator (+, -, / and *).
+   c. Do the calculation
+   d. Print the output
+
+#!/bin/bash
+
+while true; do
+    echo "1. Addition (+)"
+    echo "2. Subtraction (-)"
+    echo "3. Multiplication (*)"
+    echo "4. Division (/)"
+    echo "5. Exit"
+
+    read -p "Enter your choice (1/2/3/4/5): " choice
+
+    case $choice in
+        1)
+            read -p "Enter number a: " a
+            read -p "Enter number b: " b
+            result=$((a + b))
+            echo "Result: $a + $b = $result"
+            ;;
+        2)
+            read -p "Enter number a: " a
+            read -p "Enter number b: " b
+            result=$((a - b))
+            echo "Result: $a - $b = $result"
+            ;;
+        3)
+            read -p "Enter number a: " a
+            read -p "Enter number b: " b
+            result=$((a * b))
+            echo "Result: $a * $b = $result"
+            ;;
+        4)
+            read -p "Enter number a: " a
+            read -p "Enter number b: " b
+            if [ $b -eq 0 ]; then
+                echo "Error: Division by zero is not allowed."
+            else
+                result=$(awk "BEGIN {printf \"%.2f\", $a / $b}")
+                echo "Result: $a / $b = $result"
+            fi
+            ;;
+        5)
+            echo "Exiting the program."
+            exit 0
+            ;;
+        *)
+            echo "Invalid choice. Please select a valid option (1-5)."
+            ;;
+    esac
+done

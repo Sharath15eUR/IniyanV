@@ -1,0 +1,25 @@
+					Spoken Tutorials - Bash Assignment 
+				Funded by the National Mission on Education through ICT
+				       Indian Institute of Technology Bombay,
+					       http://spoken-tutorial.org
+-------------------------------------------------------------------------------------------------------------------
+Arrays and functions
+
+1) Write a program,
+    a. Where a function adds all the elements in an array. 
+    b. The function should display the sum of elements.
+    c. Make 2 function calls with array elements- (1, 2, 3) and (4, 5, 6).
+
+function array_addition
+{
+	declare -a a1=$1
+	declare -a a2=$2
+	declare -a sum=()
+	n=${#a1[@]}
+	for ((i=0;i<n;i++)); 
+	do
+		sum[i]=$((${a1[i]+${a2[i]}))
+	done
+	echo ${sum[@]}
+}
+array_addition "(1 2 3)" "(4 5 6)"
